@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>post_list</title>
+</head>
+<body>
+
+<ul>
+    {% for post in post_list %}
+    <li>
+        <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+        <div>
+            <span>作者:{{ post.owner.username }}</span>
+            <span>分类:{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+    
+</ul>
+
+
+</body>
+</html>
