@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>post_detail</title>
+</head>
+<body>
+
+{% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+    <span>分类：{{ post.category.name }}</span>
+    <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr>
+    <p>
+    {{ post.content }}
+    </p>
+{% endif %}
+
+</body>
+</html>
